@@ -1,77 +1,78 @@
 <h1>🤔 RP - 323 - Programmation fonctionnelle</h1>
 
->[!TIP]
->**Référence Javascript:** <https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference>  
->**Tester du code JS** : <https://runjs.app/play>  
->**Convertir en PDF** : <https://marketplace.visualstudio.com/items?itemName=manuth.markdown-converter>
+> [!TIP] >**Référence Javascript:** <https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference>  
+> **Tester du code JS** : <https://runjs.app/play>  
+> **Convertir en PDF** : <https://marketplace.visualstudio.com/items?itemName=manuth.markdown-converter>
 
 <h1>Table des matières</h1>
 
-- [Introduction](#introduction)
-- [Opérateurs javascript super-cooool 😎](#opérateurs-javascript-super-cooool-)
-  - [opérateur `?:`](#opérateur-)
-  - [opérateur `??`](#opérateur--1)
-  - [opérateur `??=`](#opérateur--2)
-  - [opérateur de décomposition 'spread' `...`](#opérateur-de-décomposition-spread-)
-  - [Déstructuration](#déstructuration)
-- [Date et Heure](#date-et-heure)
-  - [Obtenir la date et/ou heure actuelle](#obtenir-la-date-etou-heure-actuelle)
-- [Math](#math)
-  - [`Math.PI` - la constante π](#mathpi---la-constante-π)
-  - [`Math.abs()` - la |valeur absolue| d'un nombre](#mathabs---la-valeur-absolue-dun-nombre)
-  - [`Math.pow()` - élever à une puissance](#mathpow---élever-à-une-puissance)
-  - [`Math.min()` - plus petite valeur](#mathmin---plus-petite-valeur)
-  - [`Math.max()` - plus grande valeur](#mathmax---plus-grande-valeur)
-  - [`Math.ceil()` - arrondir à la prochaine valeur entière la plus proche](#mathceil---arrondir-à-la-prochaine-valeur-entière-la-plus-proche)
-  - [`Math.floor()` - arrondir à la précédente valeur entière la plus proche](#mathfloor---arrondir-à-la-précédente-valeur-entière-la-plus-proche)
-  - [`Math.round()` - arrondir à la valeur entière la plus proche](#mathround---arrondir-à-la-valeur-entière-la-plus-proche)
-  - [`Math.trunc()` - supprime la virgule et retourne la partie entière d'un nombre](#mathtrunc---supprime-la-virgule-et-retourne-la-partie-entière-dun-nombre)
-  - [`Math.sqrt()` - la raçine carrée d'un nombre](#mathsqrt---la-raçine-carrée-dun-nombre)
-  - [`Math.random()` - générer un nombre aléatoire entre 0.0 (compris) et 1.0 (non compris)](#mathrandom---générer-un-nombre-aléatoire-entre-00-compris-et-10-non-compris)
-- [JSON](#json)
-  - [`JSON.stringify()` - transformer un objet Javascript en JSON](#jsonstringify---transformer-un-objet-javascript-en-json)
-  - [`JSON.parse()` - transformer du JSON en objet Javascript](#jsonparse---transformer-du-json-en-objet-javascript)
-- [Chaînes de caractères](#chaînes-de-caractères)
-  - [`split()` - un ciseau qui coupe une chaîne là où un caractère apparaît et produit un tableau](#split---un-ciseau-qui-coupe-une-chaîne-là-où-un-caractère-apparaît-et-produit-un-tableau)
-  - [`trim()`, `trimStart()` et `trimEnd()` - épuration des espaces en trop dans une chaîne (trimming)](#trim-trimstart-et-trimend---épuration-des-espaces-en-trop-dans-une-chaîne-trimming)
-  - [`padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères](#padstart-et-padend---aligner-le-contenu-dans-une-chaîne-de-caractères)
-- [Console](#console)
-  - [`console.log()` - Afficher un message sur la console](#consolelog---afficher-un-message-sur-la-console)
-  - [`console.info()`, `warn()` et `error()` - Afficher un message sur la console (filtrables)](#consoleinfo-warn-et-error---afficher-un-message-sur-la-console-filtrables)
-  - [`console.table()` - Afficher tout un tableau ou un objet sur la console](#consoletable---afficher-tout-un-tableau-ou-un-objet-sur-la-console)
-  - [`console.time()`, `timeLog()` et `timeEnd()` - Chronométrer une durée d'exécution](#consoletime-timelog-et-timeend---chronométrer-une-durée-dexécution)
-- [Tableaux](#tableaux)
-  - [`forEach` - parcourir les éléments d'un tableau](#foreach---parcourir-les-éléments-dun-tableau)
-  - [`entries()` - parcourir les couples index/valeurs d'un tableau](#entries---parcourir-les-couples-indexvaleurs-dun-tableau)
-  - [`in` - parcourir les clés d'un tableau](#in---parcourir-les-clés-dun-tableau)
-  - [`of` - parcourir les valeurs d'un tableau](#of---parcourir-les-valeurs-dun-tableau)
-  - [`find()` - premier élément qui satisfait une condition](#find---premier-élément-qui-satisfait-une-condition)
-  - [`findIndex()` - premier index qui satisfait une condition](#findindex---premier-index-qui-satisfait-une-condition)
-  - [`indexOf()` et `lastIndexOf()` - premier/dernier élément qui correspond](#indexof-et-lastindexof---premierdernier-élément-qui-correspond)
-  - [`push()`, `pop()`, `shift()` et `unshift()` - ajouter/supprime au début/fin dans un tableau](#push-pop-shift-et-unshift---ajoutersupprime-au-débutfin-dans-un-tableau)
-  - [`slice()` - ne conserver que certaines lignes d'un tableau](#slice---ne-conserver-que-certaines-lignes-dun-tableau)
-  - [`splice()` - supprimer/insérer/remplacer des valeurs dans un tableau](#splice---supprimerinsérerremplacer-des-valeurs-dans-un-tableau)
-  - [`concat()` - joindre deux tableaux](#concat---joindre-deux-tableaux)
-  - [`join()` - joindre des chaînes de caractères](#join---joindre-des-chaînes-de-caractères)
-  - [`keys()` et `values()` - les clés/valeurs d'un objet](#keys-et-values---les-clésvaleurs-dun-objet)
-  - [`includes()` - vérifier si une valeur est présente dans un tableau](#includes---vérifier-si-une-valeur-est-présente-dans-un-tableau)
-  - [`every()` et `some()` - vérifier si plusieurs valeurs sont toutes/quelques présentes dans un tableau](#every-et-some---vérifier-si-plusieurs-valeurs-sont-toutesquelques-présentes-dans-un-tableau)
-  - [`fill()` - remplir un tableau avec des valeurs](#fill---remplir-un-tableau-avec-des-valeurs)
-  - [`flat()` - aplatir un tableau](#flat---aplatir-un-tableau)
-  - [`sort()` - pour trier un tableau](#sort---pour-trier-un-tableau)
-  - [`map()` - tableau avec les résultats d'une fonction](#map---tableau-avec-les-résultats-dune-fonction)
-  - [`filter()` - tableau avec les éléments passant un test](#filter---tableau-avec-les-éléments-passant-un-test)
-  - [`groupBy()` - regroupe les éléments d'un tableau selon un règle](#groupby---regroupe-les-éléments-dun-tableau-selon-un-règle)
-  - [`flatMap()` - chaînage de map() et flat()](#flatmap---chaînage-de-map-et-flat)
-  - [`reduce()` et `reduceRight()` - réduire un tableau à une seule valeur](#reduce-et-reduceright---réduire-un-tableau-à-une-seule-valeur)
-  - [`reverse()` - inverser l'ordre du tableau](#reverse---inverser-lordre-du-tableau)
-- [Techniques](#techniques)
-  - [\`\`(backticks) - pour des expressions intelligentes](#backticks---pour-des-expressions-intelligentes)
-  - [`new Set()` - pour supprimer les doublons](#new-set---pour-supprimer-les-doublons)
-- [Fonctions](#fonctions)
-  - [Déclaration de fonction](#déclaration-de-fonction)
-  - [Fonctions immédiatement invoquées (IIFE)](#fonctions-immédiatement-invoquées-iife)
-- [Conclusion](#conclusion)
+-   [Introduction](#introduction)
+    -   [Objectifs du module / compétences](#objectifs-du-module--compétences)
+    -   [Enjeux dans mon métier](#enjeux-dans-mon-métier)
+-   [Opérateurs javascript super-cooool 😎](#opérateurs-javascript-super-cooool-)
+    -   [opérateur `?:`](#opérateur-)
+    -   [opérateur `??`](#opérateur--1)
+    -   [opérateur `??=`](#opérateur--2)
+    -   [opérateur de décomposition 'spread' `...`](#opérateur-de-décomposition-spread-)
+    -   [Déstructuration](#déstructuration)
+-   [Date et Heure](#date-et-heure)
+    -   [Obtenir la date et/ou heure actuelle](#obtenir-la-date-etou-heure-actuelle)
+-   [Math](#math)
+    -   [`Math.PI` - la constante π](#mathpi---la-constante-π)
+    -   [`Math.abs()` - la |valeur absolue| d'un nombre](#mathabs---la-valeur-absolue-dun-nombre)
+    -   [`Math.pow()` - élever à une puissance](#mathpow---élever-à-une-puissance)
+    -   [`Math.min()` - plus petite valeur](#mathmin---plus-petite-valeur)
+    -   [`Math.max()` - plus grande valeur](#mathmax---plus-grande-valeur)
+    -   [`Math.ceil()` - arrondir à la prochaine valeur entière la plus proche](#mathceil---arrondir-à-la-prochaine-valeur-entière-la-plus-proche)
+    -   [`Math.floor()` - arrondir à la précédente valeur entière la plus proche](#mathfloor---arrondir-à-la-précédente-valeur-entière-la-plus-proche)
+    -   [`Math.round()` - arrondir à la valeur entière la plus proche](#mathround---arrondir-à-la-valeur-entière-la-plus-proche)
+    -   [`Math.trunc()` - supprime la virgule et retourne la partie entière d'un nombre](#mathtrunc---supprime-la-virgule-et-retourne-la-partie-entière-dun-nombre)
+    -   [`Math.sqrt()` - la raçine carrée d'un nombre](#mathsqrt---la-raçine-carrée-dun-nombre)
+    -   [`Math.random()` - générer un nombre aléatoire entre 0.0 (compris) et 1.0 (non compris)](#mathrandom---générer-un-nombre-aléatoire-entre-00-compris-et-10-non-compris)
+-   [JSON](#json)
+    -   [`JSON.stringify()` - transformer un objet Javascript en JSON](#jsonstringify---transformer-un-objet-javascript-en-json)
+    -   [`JSON.parse()` - transformer du JSON en objet Javascript](#jsonparse---transformer-du-json-en-objet-javascript)
+-   [Chaînes de caractères](#chaînes-de-caractères)
+    -   [`split()` - un ciseau qui coupe une chaîne là où un caractère apparaît et produit un tableau](#split---un-ciseau-qui-coupe-une-chaîne-là-où-un-caractère-apparaît-et-produit-un-tableau)
+    -   [`trim()`, `trimStart()` et `trimEnd()` - épuration des espaces en trop dans une chaîne (trimming)](#trim-trimstart-et-trimend---épuration-des-espaces-en-trop-dans-une-chaîne-trimming)
+    -   [`padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères](#padstart-et-padend---aligner-le-contenu-dans-une-chaîne-de-caractères)
+-   [Console](#console)
+    -   [`console.log()` - Afficher un message sur la console](#consolelog---afficher-un-message-sur-la-console)
+    -   [`console.info()`, `warn()` et `error()` - Afficher un message sur la console (filtrables)](#consoleinfo-warn-et-error---afficher-un-message-sur-la-console-filtrables)
+    -   [`console.table()` - Afficher tout un tableau ou un objet sur la console](#consoletable---afficher-tout-un-tableau-ou-un-objet-sur-la-console)
+    -   [`console.time()`, `timeLog()` et `timeEnd()` - Chronométrer une durée d'exécution](#consoletime-timelog-et-timeend---chronométrer-une-durée-dexécution)
+-   [Tableaux](#tableaux)
+    -   [`forEach` - parcourir les éléments d'un tableau](#foreach---parcourir-les-éléments-dun-tableau)
+    -   [`entries()` - parcourir les couples index/valeurs d'un tableau](#entries---parcourir-les-couples-indexvaleurs-dun-tableau)
+    -   [`in` - parcourir les clés d'un tableau](#in---parcourir-les-clés-dun-tableau)
+    -   [`of` - parcourir les valeurs d'un tableau](#of---parcourir-les-valeurs-dun-tableau)
+    -   [`find()` - premier élément qui satisfait une condition](#find---premier-élément-qui-satisfait-une-condition)
+    -   [`findIndex()` - premier index qui satisfait une condition](#findindex---premier-index-qui-satisfait-une-condition)
+    -   [`indexOf()` et `lastIndexOf()` - premier/dernier élément qui correspond](#indexof-et-lastindexof---premierdernier-élément-qui-correspond)
+    -   [`push()`, `pop()`, `shift()` et `unshift()` - ajouter/supprime au début/fin dans un tableau](#push-pop-shift-et-unshift---ajoutersupprime-au-débutfin-dans-un-tableau)
+    -   [`slice()` - ne conserver que certaines lignes d'un tableau](#slice---ne-conserver-que-certaines-lignes-dun-tableau)
+    -   [`splice()` - supprimer/insérer/remplacer des valeurs dans un tableau](#splice---supprimerinsérerremplacer-des-valeurs-dans-un-tableau)
+    -   [`concat()` - joindre deux tableaux](#concat---joindre-deux-tableaux)
+    -   [`join()` - joindre des chaînes de caractères](#join---joindre-des-chaînes-de-caractères)
+    -   [`keys()` et `values()` - les clés/valeurs d'un objet](#keys-et-values---les-clésvaleurs-dun-objet)
+    -   [`includes()` - vérifier si une valeur est présente dans un tableau](#includes---vérifier-si-une-valeur-est-présente-dans-un-tableau)
+    -   [`every()` et `some()` - vérifier si plusieurs valeurs sont toutes/quelques présentes dans un tableau](#every-et-some---vérifier-si-plusieurs-valeurs-sont-toutesquelques-présentes-dans-un-tableau)
+    -   [`fill()` - remplir un tableau avec des valeurs](#fill---remplir-un-tableau-avec-des-valeurs)
+    -   [`flat()` - aplatir un tableau](#flat---aplatir-un-tableau)
+    -   [`sort()` - pour trier un tableau](#sort---pour-trier-un-tableau)
+    -   [`map()` - tableau avec les résultats d'une fonction](#map---tableau-avec-les-résultats-dune-fonction)
+    -   [`filter()` - tableau avec les éléments passant un test](#filter---tableau-avec-les-éléments-passant-un-test)
+    -   [`groupBy()` - regroupe les éléments d'un tableau selon un règle](#groupby---regroupe-les-éléments-dun-tableau-selon-un-règle)
+    -   [`flatMap()` - chaînage de map() et flat()](#flatmap---chaînage-de-map-et-flat)
+    -   [`reduce()` et `reduceRight()` - réduire un tableau à une seule valeur](#reduce-et-reduceright---réduire-un-tableau-à-une-seule-valeur)
+    -   [`reverse()` - inverser l'ordre du tableau](#reverse---inverser-lordre-du-tableau)
+-   [Techniques](#techniques)
+    -   [\`\`(backticks) - pour des expressions intelligentes](#backticks---pour-des-expressions-intelligentes)
+    -   [`new Set()` - pour supprimer les doublons](#new-set---pour-supprimer-les-doublons)
+-   [Fonctions](#fonctions)
+    -   [Déclaration de fonction](#déclaration-de-fonction)
+    -   [Fonctions immédiatement invoquées (IIFE)](#fonctions-immédiatement-invoquées-iife)
+-   [Conclusion](#conclusion)
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
   <rect y="5" width="100%" height="5" fill="#7191B8"/>
@@ -79,7 +80,21 @@
 
 # Introduction
 
-> Votre introduction avec notamment les objectifs opérationnels du module.
+## Objectifs du module / compétences
+
+-   Comprendre les différences entre programmation impérative et fonctionnelle.
+-   Utiliser des fonctions pures, la composition de fonctions, l’immutabilité, et d'autres concepts clés du paradigme fonctionnel.
+-   Mettre en œuvre des fonctions fondamentales comme map, filter et reduce.
+-   Refactoriser du code impératif en code fonctionnel.
+-   Vérifier et améliorer la qualité et l’exactitude d’une implémentation fonctionnelle.
+-   Acquérir des bases solides en programmation fonctionnelle pour les appliquer dans des projets concrets.
+-   Réaliser une application Web selon les exigences d’un paradigme fonctionnel.
+-   Appliquer les bonnes pratiques et les patterns associés (comme le builder pattern, le currying ou les closures).
+-   Travailler en autonomie sur des exercices pratiques à l’aide de Visual Studio Code et GitHub.
+
+## Enjeux dans mon métier
+
+La programmation fonctionnelle est une approche de plus en plus utilisée dans les projets modernes, notamment dans le traitement de données. Ce module est donc essentiel pour moi, car il me permet de penser et concevoir mon code autrement, de manière plus stricte, avec une meilleure lisibilité et maintenabilité. Apprendre à utiliser des fonctions pures, à éviter les effets de bord ou encore à manipuler les tableaux avec des fonctions comme map, filter ou reduce, me rend plus efficace. Ces compétences sont des atouts importants pour un développeur qui souhaite produire du code propre, testable et modulaire.
 
 # Opérateurs javascript super-cooool 😎
 
@@ -103,10 +118,10 @@ const foo1 = null ?? 'default'; // "default"
 const foo2 = 0 ?? 42; // 0
 ```
 
->[!CAUTION]
->Contrairement à l'opérateur logique OU (`||`), l'opérande de gauche sera également renvoyé s'il s'agit d'une valeur équivalente à `false` et pas seulement `null` et `undefined`.
+> [!CAUTION]
+> Contrairement à l'opérateur logique OU (`||`), l'opérande de gauche sera également renvoyé s'il s'agit d'une valeur équivalente à `false` et pas seulement `null` et `undefined`.
 >
->⚠️ En d'autres termes **ATTENTION** ‼️ lors de l'utilisation de `||` pour fournir une valeur par défaut à une variable, car on peut rencontrer des comportements inattendus lorsqu'on considère certaines valeurs comme correctes et utilisables (par exemple une chaine vide `''` ou `0`) ‼️
+> ⚠️ En d'autres termes **ATTENTION** ‼️ lors de l'utilisation de `||` pour fournir une valeur par défaut à une variable, car on peut rencontrer des comportements inattendus lorsqu'on considère certaines valeurs comme correctes et utilisables (par exemple une chaine vide `''` ou `0`) ‼️
 
 ```javascript
 const foo3 = 0 || 42; // 42 => ATTENTION !
@@ -205,101 +220,92 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `Math.PI` - la constante π
 
-Description à faire par vos soins...
+La constante Math.PI permet d'accéder directement à la valeur de π (pi), utile pour les calculs de cercles ou de trigonométrie.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.PI); // 3.141592653589793
 ```
 
 ## `Math.abs()` - la \|valeur absolue\| d'un nombre
 
-Description à faire par vos soins...
+Retourne la valeur absolue (positive) d'un nombre, en supprimant le signe négatif s'il existe.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.abs(-10)); // 10
 ```
 
 ## `Math.pow()` - élever à une puissance
 
-Description à faire par vos soins...
+Permet d'élever un nombre à une puissance donnée : Math.pow(base, exposant).
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.pow(2, 3)); // 8
 ```
 
 ## `Math.min()` - plus petite valeur
 
-Description à faire par vos soins...
+Retourne la plus petite valeur parmi les arguments fournis.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.min(3, 7, -2, 0)); // -2
 ```
 
 ## `Math.max()` - plus grande valeur
 
-Description à faire par vos soins...
+Retourne la plus grande valeur parmi les arguments fournis.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.max(3, 7, -2, 0)); // 7
 ```
 
 ## `Math.ceil()` - arrondir à la prochaine valeur entière la plus proche
 
-Description à faire par vos soins...
+Arrondit un nombre à l'entier supérieur le plus proche.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.ceil(4.2)); // 5
 ```
 
 ## `Math.floor()` - arrondir à la précédente valeur entière la plus proche
 
-Description à faire par vos soins...
+Arrondit un nombre à l'entier inférieur le plus proche.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.floor(4.9)); // 4
 ```
 
 ## `Math.round()` - arrondir à la valeur entière la plus proche
 
-Description à faire par vos soins...
+Arrondit un nombre à l'entier le plus proche (selon sa virgule).
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.round(4.4)); // 4
+console.log(Math.round(4.6)); // 5
 ```
 
 ## `Math.trunc()` - supprime la virgule et retourne la partie entière d'un nombre
 
-Description à faire par vos soins...
+Supprime la partie décimale et retourne uniquement la partie entière.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.trunc(4.9)); // 4
+console.log(Math.trunc(-4.9)); // -4
 ```
 
 ## `Math.sqrt()` - la raçine carrée d'un nombre
 
-Description à faire par vos soins...
+Retourne la racine carrée d'un nombre positif.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.sqrt(9)); // 3
 ```
 
 ## `Math.random()` - générer un nombre aléatoire entre 0.0 (compris) et 1.0 (non compris)
 
-Description à faire par vos soins...
+Génère un nombre pseudo-aléatoire compris entre 0 (inclus) et 1 (exclus).
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.log(Math.random()); // ex: 0.721948321
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -312,20 +318,20 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `JSON.stringify()` - transformer un objet Javascript en JSON
 
-Description à faire par vos soins...
+Transforme un objet JavaScript en une chaîne de texte au format JSON. Très utile pour stocker ou transmettre des données.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const user = { nom: 'Alice', age: 25 };
+console.log(JSON.stringify(user)); // '{"nom":"Alice","age":25}'
 ```
 
 ## `JSON.parse()` - transformer du JSON en objet Javascript
 
-Description à faire par vos soins...
+Transforme une chaîne JSON valide en un objet JavaScript manipulable.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const json = '{"nom":"Alice","age":25}';
+console.log(JSON.parse(json)); // { nom: 'Alice', age: 25 }
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -338,29 +344,36 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `split()` - un ciseau qui coupe une chaîne là où un caractère apparaît et produit un tableau
 
-Description à faire par vos soins...
+Divise une chaîne de caractères selon un séparateur donné et retourne un tableau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const phrase = 'un-deux-trois';
+console.log(phrase.split('-')); // ['un', 'deux', 'trois']
 ```
 
 ## `trim()`, `trimStart()` et `trimEnd()` - épuration des espaces en trop dans une chaîne (trimming)
 
-Description à faire par vos soins...
+Suppriment les espaces en début et/ou fin d'une chaîne.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const text = '   Hello World!   ';
+console.log(text.trim()); // 'Hello World!'
+console.log(text.trimStart()); // 'Hello World!   '
+console.log(text.trimEnd()); // '   Hello World!'
 ```
 
 ## `padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères
 
-Description à faire par vos soins...
+Permettent d’ajouter des caractères au début (padStart) ou à la fin (padEnd) d’une chaîne, jusqu’à atteindre une longueur donnée.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const num = '5';
+console.log(num.padStart(3, '0')); // '005'
+console.log(num.padEnd(4, '-')); // '5---'
+
+const mot = 'Chat';
+console.log(mot.padStart(8, ' ')); // '    Chat'  ← aligné à droite
+console.log(mot.padEnd(8, ' ')); // 'Chat    '  ← aligné à gauche
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -379,29 +392,41 @@ console.log('Coucou !'); // Coucou !
 
 ## `console.info()`, `warn()` et `error()` - Afficher un message sur la console (filtrables)
 
-Description à faire par vos soins...
+Ces méthodes affichent des messages avec un niveau d’importance différent.
+Utile pour distinguer les informations, avertissements et erreurs dans la console.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.info('Chargement terminé.'); // ℹ️ Info (bleu ou neutre)
+console.warn('Mémoire presque pleine.'); // ⚠️ Avertissement (jaune)
+console.error('Fichier introuvable !'); // ❌ Erreur (rouge)
 ```
 
 ## `console.table()` - Afficher tout un tableau ou un objet sur la console
 
-Description à faire par vos soins...
+Affiche un tableau ou un objet sous forme de table lisible dans la console.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const personnes = [
+    { nom: 'Alice', age: 25 },
+    { nom: 'Bob', age: 30 },
+    { nom: 'Charlie', age: 28 },
+];
+
+console.table(personnes);
+
+console.table(personnes, ['nom']); // n’affiche que la colonne "nom"
 ```
 
 ## `console.time()`, `timeLog()` et `timeEnd()` - Chronométrer une durée d'exécution
 
-Description à faire par vos soins...
+Permettent de mesurer le temps d’exécution d’un bloc de code entre le début (time()) et la fin (timeEnd()).
+timeLog() affiche le temps écoulé sans arrêter le chronomètre.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.time('test'); // ⏱️ Démarre le chrono
+for (let i = 0; i < 1e6; i++) {}
+console.timeLog('test'); // ⏱️ Affiche le temps intermédiaire
+console.timeEnd('test'); // ⏱️ Affiche le temps total et arrête le chrono
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -414,11 +439,15 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `forEach` - parcourir les éléments d'un tableau
 
-Description à faire par vos soins...
+Permet d’exécuter une fonction pour chaque élément d’un tableau.
+Idéal pour parcourir un tableau sans créer de nouveau tableau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ['pomme', 'banane', 'cerise'];
+
+fruits.forEach((fruit, index) => {
+    console.log(`${index} : ${fruit}`);
+});
 ```
 
 ## `entries()` - parcourir les couples index/valeurs d'un tableau
