@@ -94,7 +94,7 @@
 
 ## Enjeux dans mon métier
 
-La programmation fonctionnelle est une approche de plus en plus utilisée dans les projets modernes, notamment dans les frameworks frontend (comme React) ou dans le traitement de données. Ce module est donc essentiel pour moi, car il me permet de penser et concevoir mon code autrement, avec plus de rigueur, de lisibilité et de maintenabilité. Apprendre à utiliser des fonctions pures, à éviter les effets de bord ou encore à manipuler les tableaux avec des fonctions comme map, filter ou reduce, me rend plus efficace et adaptable à différents contextes techniques. Ces compétences sont des atouts importants pour un développeur qui souhaite produire du code propre, testable et modulaire.
+La programmation fonctionnelle est une approche de plus en plus utilisée dans les projets modernes, notamment dans le traitement de données. Ce module est donc essentiel pour moi, car il me permet de penser et concevoir mon code autrement, de manière plus stricte, avec une meilleure lisibilité et maintenabilité. Apprendre à utiliser des fonctions pures, à éviter les effets de bord ou encore à manipuler les tableaux avec des fonctions comme map, filter ou reduce, me rend plus efficace. Ces compétences sont des atouts importants pour un développeur qui souhaite produire du code propre, testable et modulaire.
 
 # Opérateurs javascript super-cooool 😎
 
@@ -318,20 +318,20 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `JSON.stringify()` - transformer un objet Javascript en JSON
 
-Description à faire par vos soins...
+Transforme un objet JavaScript en une chaîne de texte au format JSON. Très utile pour stocker ou transmettre des données.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const user = { nom: 'Alice', age: 25 };
+console.log(JSON.stringify(user)); // '{"nom":"Alice","age":25}'
 ```
 
 ## `JSON.parse()` - transformer du JSON en objet Javascript
 
-Description à faire par vos soins...
+Transforme une chaîne JSON valide en un objet JavaScript manipulable.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const json = '{"nom":"Alice","age":25}';
+console.log(JSON.parse(json)); // { nom: 'Alice', age: 25 }
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -344,20 +344,22 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `split()` - un ciseau qui coupe une chaîne là où un caractère apparaît et produit un tableau
 
-Description à faire par vos soins...
+Divise une chaîne de caractères selon un séparateur donné et retourne un tableau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const phrase = 'un-deux-trois';
+console.log(phrase.split('-')); // ['un', 'deux', 'trois']
 ```
 
 ## `trim()`, `trimStart()` et `trimEnd()` - épuration des espaces en trop dans une chaîne (trimming)
 
-Description à faire par vos soins...
+Suppriment les espaces en début et/ou fin d'une chaîne.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const text = '   Hello World!   ';
+console.log(text.trim()); // 'Hello World!'
+console.log(text.trimStart()); // 'Hello World!   '
+console.log(text.trimEnd()); // '   Hello World!'
 ```
 
 ## `padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères
