@@ -364,11 +364,16 @@ console.log(text.trimEnd()); // '   Hello World!'
 
 ## `padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères
 
-Description à faire par vos soins...
+Permettent d’ajouter des caractères au début (padStart) ou à la fin (padEnd) d’une chaîne, jusqu’à atteindre une longueur donnée.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const num = '5';
+console.log(num.padStart(3, '0')); // '005'
+console.log(num.padEnd(4, '-')); // '5---'
+
+const mot = 'Chat';
+console.log(mot.padStart(8, ' ')); // '    Chat'  ← aligné à droite
+console.log(mot.padEnd(8, ' ')); // 'Chat    '  ← aligné à gauche
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -387,29 +392,41 @@ console.log('Coucou !'); // Coucou !
 
 ## `console.info()`, `warn()` et `error()` - Afficher un message sur la console (filtrables)
 
-Description à faire par vos soins...
+Ces méthodes affichent des messages avec un niveau d’importance différent.
+Utile pour distinguer les informations, avertissements et erreurs dans la console.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.info('Chargement terminé.'); // ℹ️ Info (bleu ou neutre)
+console.warn('Mémoire presque pleine.'); // ⚠️ Avertissement (jaune)
+console.error('Fichier introuvable !'); // ❌ Erreur (rouge)
 ```
 
 ## `console.table()` - Afficher tout un tableau ou un objet sur la console
 
-Description à faire par vos soins...
+Affiche un tableau ou un objet sous forme de table lisible dans la console.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const personnes = [
+    { nom: 'Alice', age: 25 },
+    { nom: 'Bob', age: 30 },
+    { nom: 'Charlie', age: 28 },
+];
+
+console.table(personnes);
+
+console.table(personnes, ['nom']); // n’affiche que la colonne "nom"
 ```
 
 ## `console.time()`, `timeLog()` et `timeEnd()` - Chronométrer une durée d'exécution
 
-Description à faire par vos soins...
+Permettent de mesurer le temps d’exécution d’un bloc de code entre le début (time()) et la fin (timeEnd()).
+timeLog() affiche le temps écoulé sans arrêter le chronomètre.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+console.time('test'); // ⏱️ Démarre le chrono
+for (let i = 0; i < 1e6; i++) {}
+console.timeLog('test'); // ⏱️ Affiche le temps intermédiaire
+console.timeEnd('test'); // ⏱️ Affiche le temps total et arrête le chrono
 ```
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
@@ -422,11 +439,15 @@ Lien vers la documentation officielle : [https://developer.mozilla.org/fr/docs/W
 
 ## `forEach` - parcourir les éléments d'un tableau
 
-Description à faire par vos soins...
+Permet d’exécuter une fonction pour chaque élément d’un tableau.
+Idéal pour parcourir un tableau sans créer de nouveau tableau.
 
 ```javascript
-A FAIRE PAR VOS SOINS...
-SIMPLE, DROIT AU BUT, UTILE, STYLE PENSE-BÊTE
+const fruits = ['pomme', 'banane', 'cerise'];
+
+fruits.forEach((fruit, index) => {
+    console.log(`${index} : ${fruit}`);
+});
 ```
 
 ## `entries()` - parcourir les couples index/valeurs d'un tableau
