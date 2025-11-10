@@ -836,4 +836,6 @@ ou
 
 # Conclusion
 
-> Votre conclusion avec les éléments usuels
+Ce module de programmation fonctionnelle a été un véritable défi. D'être capable de reprendre ce que nous faisions jusque-là en programmation en utilisant une logique différente a vraiment été difficile pour moi.
+Nous avons appris à raisonner autrement, en privilégiant les fonctions pures, les immutabilités et les méthodes comme `map()`, `filter()`, ou `reduce()` plutôt que les boucles. Cela demande de bien comprendre la logique des transformations de données et la manière de chaîner les opérations pour obtenir le résultat voulu.
+Même si cela a été complexe au début, ce module m’a permis d’acquérir une nouvelle façon de penser le code, plus structurée, plus claire et souvent plus concise.
