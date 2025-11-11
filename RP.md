@@ -6,73 +6,73 @@
 
 <h1>Table des matières</h1>
 
--   [Introduction](#introduction)
-    -   [Objectifs du module / compétences](#objectifs-du-module--compétences)
-    -   [Enjeux dans mon métier](#enjeux-dans-mon-métier)
--   [Opérateurs javascript super-cooool 😎](#opérateurs-javascript-super-cooool-)
-    -   [opérateur `?:`](#opérateur-)
-    -   [opérateur `??`](#opérateur--1)
-    -   [opérateur `??=`](#opérateur--2)
-    -   [opérateur de décomposition 'spread' `...`](#opérateur-de-décomposition-spread-)
-    -   [Déstructuration](#déstructuration)
--   [Date et Heure](#date-et-heure)
-    -   [Obtenir la date et/ou heure actuelle](#obtenir-la-date-etou-heure-actuelle)
--   [Math](#math)
-    -   [`Math.PI` - la constante π](#mathpi---la-constante-π)
-    -   [`Math.abs()` - la |valeur absolue| d'un nombre](#mathabs---la-valeur-absolue-dun-nombre)
-    -   [`Math.pow()` - élever à une puissance](#mathpow---élever-à-une-puissance)
-    -   [`Math.min()` - plus petite valeur](#mathmin---plus-petite-valeur)
-    -   [`Math.max()` - plus grande valeur](#mathmax---plus-grande-valeur)
-    -   [`Math.ceil()` - arrondir à la prochaine valeur entière la plus proche](#mathceil---arrondir-à-la-prochaine-valeur-entière-la-plus-proche)
-    -   [`Math.floor()` - arrondir à la précédente valeur entière la plus proche](#mathfloor---arrondir-à-la-précédente-valeur-entière-la-plus-proche)
-    -   [`Math.round()` - arrondir à la valeur entière la plus proche](#mathround---arrondir-à-la-valeur-entière-la-plus-proche)
-    -   [`Math.trunc()` - supprime la virgule et retourne la partie entière d'un nombre](#mathtrunc---supprime-la-virgule-et-retourne-la-partie-entière-dun-nombre)
-    -   [`Math.sqrt()` - la raçine carrée d'un nombre](#mathsqrt---la-raçine-carrée-dun-nombre)
-    -   [`Math.random()` - générer un nombre aléatoire entre 0.0 (compris) et 1.0 (non compris)](#mathrandom---générer-un-nombre-aléatoire-entre-00-compris-et-10-non-compris)
--   [JSON](#json)
-    -   [`JSON.stringify()` - transformer un objet Javascript en JSON](#jsonstringify---transformer-un-objet-javascript-en-json)
-    -   [`JSON.parse()` - transformer du JSON en objet Javascript](#jsonparse---transformer-du-json-en-objet-javascript)
--   [Chaînes de caractères](#chaînes-de-caractères)
-    -   [`split()` - un ciseau qui coupe une chaîne là où un caractère apparaît et produit un tableau](#split---un-ciseau-qui-coupe-une-chaîne-là-où-un-caractère-apparaît-et-produit-un-tableau)
-    -   [`trim()`, `trimStart()` et `trimEnd()` - épuration des espaces en trop dans une chaîne (trimming)](#trim-trimstart-et-trimend---épuration-des-espaces-en-trop-dans-une-chaîne-trimming)
-    -   [`padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères](#padstart-et-padend---aligner-le-contenu-dans-une-chaîne-de-caractères)
--   [Console](#console)
-    -   [`console.log()` - Afficher un message sur la console](#consolelog---afficher-un-message-sur-la-console)
-    -   [`console.info()`, `warn()` et `error()` - Afficher un message sur la console (filtrables)](#consoleinfo-warn-et-error---afficher-un-message-sur-la-console-filtrables)
-    -   [`console.table()` - Afficher tout un tableau ou un objet sur la console](#consoletable---afficher-tout-un-tableau-ou-un-objet-sur-la-console)
-    -   [`console.time()`, `timeLog()` et `timeEnd()` - Chronométrer une durée d'exécution](#consoletime-timelog-et-timeend---chronométrer-une-durée-dexécution)
--   [Tableaux](#tableaux)
-    -   [`forEach` - parcourir les éléments d'un tableau](#foreach---parcourir-les-éléments-dun-tableau)
-    -   [`entries()` - parcourir les couples index/valeurs d'un tableau](#entries---parcourir-les-couples-indexvaleurs-dun-tableau)
-    -   [`in` - parcourir les clés d'un tableau](#in---parcourir-les-clés-dun-tableau)
-    -   [`of` - parcourir les valeurs d'un tableau](#of---parcourir-les-valeurs-dun-tableau)
-    -   [`find()` - premier élément qui satisfait une condition](#find---premier-élément-qui-satisfait-une-condition)
-    -   [`findIndex()` - premier index qui satisfait une condition](#findindex---premier-index-qui-satisfait-une-condition)
-    -   [`indexOf()` et `lastIndexOf()` - premier/dernier élément qui correspond](#indexof-et-lastindexof---premierdernier-élément-qui-correspond)
-    -   [`push()`, `pop()`, `shift()` et `unshift()` - ajouter/supprime au début/fin dans un tableau](#push-pop-shift-et-unshift---ajoutersupprime-au-débutfin-dans-un-tableau)
-    -   [`slice()` - ne conserver que certaines lignes d'un tableau](#slice---ne-conserver-que-certaines-lignes-dun-tableau)
-    -   [`splice()` - supprimer/insérer/remplacer des valeurs dans un tableau](#splice---supprimerinsérerremplacer-des-valeurs-dans-un-tableau)
-    -   [`concat()` - joindre deux tableaux](#concat---joindre-deux-tableaux)
-    -   [`join()` - joindre des chaînes de caractères](#join---joindre-des-chaînes-de-caractères)
-    -   [`keys()` et `values()` - les clés/valeurs d'un objet](#keys-et-values---les-clésvaleurs-dun-objet)
-    -   [`includes()` - vérifier si une valeur est présente dans un tableau](#includes---vérifier-si-une-valeur-est-présente-dans-un-tableau)
-    -   [`every()` et `some()` - vérifier si plusieurs valeurs sont toutes/quelques présentes dans un tableau](#every-et-some---vérifier-si-plusieurs-valeurs-sont-toutesquelques-présentes-dans-un-tableau)
-    -   [`fill()` - remplir un tableau avec des valeurs](#fill---remplir-un-tableau-avec-des-valeurs)
-    -   [`flat()` - aplatir un tableau](#flat---aplatir-un-tableau)
-    -   [`sort()` - pour trier un tableau](#sort---pour-trier-un-tableau)
-    -   [`map()` - tableau avec les résultats d'une fonction](#map---tableau-avec-les-résultats-dune-fonction)
-    -   [`filter()` - tableau avec les éléments passant un test](#filter---tableau-avec-les-éléments-passant-un-test)
-    -   [`groupBy()` - regroupe les éléments d'un tableau selon un règle](#groupby---regroupe-les-éléments-dun-tableau-selon-un-règle)
-    -   [`flatMap()` - chaînage de map() et flat()](#flatmap---chaînage-de-map-et-flat)
-    -   [`reduce()` et `reduceRight()` - réduire un tableau à une seule valeur](#reduce-et-reduceright---réduire-un-tableau-à-une-seule-valeur)
-    -   [`reverse()` - inverser l'ordre du tableau](#reverse---inverser-lordre-du-tableau)
--   [Techniques](#techniques)
-    -   [\`\`(backticks) - pour des expressions intelligentes](#backticks---pour-des-expressions-intelligentes)
-    -   [`new Set()` - pour supprimer les doublons](#new-set---pour-supprimer-les-doublons)
--   [Fonctions](#fonctions)
-    -   [Déclaration de fonction](#déclaration-de-fonction)
-    -   [Fonctions immédiatement invoquées (IIFE)](#fonctions-immédiatement-invoquées-iife)
--   [Conclusion](#conclusion)
+- [Introduction](#introduction)
+  - [Objectifs du module / compétences](#objectifs-du-module--compétences)
+  - [Enjeux dans mon métier](#enjeux-dans-mon-métier)
+- [Opérateurs javascript super-cooool 😎](#opérateurs-javascript-super-cooool-)
+  - [opérateur `?:`](#opérateur-)
+  - [opérateur `??`](#opérateur--1)
+  - [opérateur `??=`](#opérateur--2)
+  - [opérateur de décomposition 'spread' `...`](#opérateur-de-décomposition-spread-)
+  - [Déstructuration](#déstructuration)
+- [Date et Heure](#date-et-heure)
+  - [Obtenir la date et/ou heure actuelle](#obtenir-la-date-etou-heure-actuelle)
+- [Math](#math)
+  - [`Math.PI` - la constante π](#mathpi---la-constante-π)
+  - [`Math.abs()` - la |valeur absolue| d'un nombre](#mathabs---la-valeur-absolue-dun-nombre)
+  - [`Math.pow()` - élever à une puissance](#mathpow---élever-à-une-puissance)
+  - [`Math.min()` - plus petite valeur](#mathmin---plus-petite-valeur)
+  - [`Math.max()` - plus grande valeur](#mathmax---plus-grande-valeur)
+  - [`Math.ceil()` - arrondir à la prochaine valeur entière la plus proche](#mathceil---arrondir-à-la-prochaine-valeur-entière-la-plus-proche)
+  - [`Math.floor()` - arrondir à la précédente valeur entière la plus proche](#mathfloor---arrondir-à-la-précédente-valeur-entière-la-plus-proche)
+  - [`Math.round()` - arrondir à la valeur entière la plus proche](#mathround---arrondir-à-la-valeur-entière-la-plus-proche)
+  - [`Math.trunc()` - supprime la virgule et retourne la partie entière d'un nombre](#mathtrunc---supprime-la-virgule-et-retourne-la-partie-entière-dun-nombre)
+  - [`Math.sqrt()` - la raçine carrée d'un nombre](#mathsqrt---la-raçine-carrée-dun-nombre)
+  - [`Math.random()` - générer un nombre aléatoire entre 0.0 (compris) et 1.0 (non compris)](#mathrandom---générer-un-nombre-aléatoire-entre-00-compris-et-10-non-compris)
+- [JSON](#json)
+  - [`JSON.stringify()` - transformer un objet Javascript en JSON](#jsonstringify---transformer-un-objet-javascript-en-json)
+  - [`JSON.parse()` - transformer du JSON en objet Javascript](#jsonparse---transformer-du-json-en-objet-javascript)
+- [Chaînes de caractères](#chaînes-de-caractères)
+  - [`split()` - un ciseau qui coupe une chaîne là où un caractère apparaît et produit un tableau](#split---un-ciseau-qui-coupe-une-chaîne-là-où-un-caractère-apparaît-et-produit-un-tableau)
+  - [`trim()`, `trimStart()` et `trimEnd()` - épuration des espaces en trop dans une chaîne (trimming)](#trim-trimstart-et-trimend---épuration-des-espaces-en-trop-dans-une-chaîne-trimming)
+  - [`padStart()` et `padEnd()` - aligner le contenu dans une chaîne de caractères](#padstart-et-padend---aligner-le-contenu-dans-une-chaîne-de-caractères)
+- [Console](#console)
+  - [`console.log()` - Afficher un message sur la console](#consolelog---afficher-un-message-sur-la-console)
+  - [`console.info()`, `warn()` et `error()` - Afficher un message sur la console (filtrables)](#consoleinfo-warn-et-error---afficher-un-message-sur-la-console-filtrables)
+  - [`console.table()` - Afficher tout un tableau ou un objet sur la console](#consoletable---afficher-tout-un-tableau-ou-un-objet-sur-la-console)
+  - [`console.time()`, `timeLog()` et `timeEnd()` - Chronométrer une durée d'exécution](#consoletime-timelog-et-timeend---chronométrer-une-durée-dexécution)
+- [Tableaux](#tableaux)
+  - [`forEach` - parcourir les éléments d'un tableau](#foreach---parcourir-les-éléments-dun-tableau)
+  - [`entries()` - parcourir les couples index/valeurs d'un tableau](#entries---parcourir-les-couples-indexvaleurs-dun-tableau)
+  - [`in` - parcourir les clés d'un tableau](#in---parcourir-les-clés-dun-tableau)
+  - [`of` - parcourir les valeurs d'un tableau](#of---parcourir-les-valeurs-dun-tableau)
+  - [`find()` - premier élément qui satisfait une condition](#find---premier-élément-qui-satisfait-une-condition)
+  - [`findIndex()` - premier index qui satisfait une condition](#findindex---premier-index-qui-satisfait-une-condition)
+  - [`indexOf()` et `lastIndexOf()` - premier/dernier élément qui correspond](#indexof-et-lastindexof---premierdernier-élément-qui-correspond)
+  - [`push()`, `pop()`, `shift()` et `unshift()` - ajouter/supprime au début/fin dans un tableau](#push-pop-shift-et-unshift---ajoutersupprime-au-débutfin-dans-un-tableau)
+  - [`slice()` - ne conserver que certaines lignes d'un tableau](#slice---ne-conserver-que-certaines-lignes-dun-tableau)
+  - [`splice()` - supprimer/insérer/remplacer des valeurs dans un tableau](#splice---supprimerinsérerremplacer-des-valeurs-dans-un-tableau)
+  - [`concat()` - joindre deux tableaux](#concat---joindre-deux-tableaux)
+  - [`join()` - joindre des chaînes de caractères](#join---joindre-des-chaînes-de-caractères)
+  - [`keys()` et `values()` - les clés/valeurs d'un objet](#keys-et-values---les-clésvaleurs-dun-objet)
+  - [`includes()` - vérifier si une valeur est présente dans un tableau](#includes---vérifier-si-une-valeur-est-présente-dans-un-tableau)
+  - [`every()` et `some()` - vérifier si plusieurs valeurs sont toutes/quelques présentes dans un tableau](#every-et-some---vérifier-si-plusieurs-valeurs-sont-toutesquelques-présentes-dans-un-tableau)
+  - [`fill()` - remplir un tableau avec des valeurs](#fill---remplir-un-tableau-avec-des-valeurs)
+  - [`flat()` - aplatir un tableau](#flat---aplatir-un-tableau)
+  - [`sort()` - pour trier un tableau](#sort---pour-trier-un-tableau)
+  - [`map()` - tableau avec les résultats d'une fonction](#map---tableau-avec-les-résultats-dune-fonction)
+  - [`filter()` - tableau avec les éléments passant un test](#filter---tableau-avec-les-éléments-passant-un-test)
+  - [`groupBy()` - regroupe les éléments d'un tableau selon un règle](#groupby---regroupe-les-éléments-dun-tableau-selon-un-règle)
+  - [`flatMap()` - chaînage de map() et flat()](#flatmap---chaînage-de-map-et-flat)
+  - [`reduce()` et `reduceRight()` - réduire un tableau à une seule valeur](#reduce-et-reduceright---réduire-un-tableau-à-une-seule-valeur)
+  - [`reverse()` - inverser l'ordre du tableau](#reverse---inverser-lordre-du-tableau)
+- [Techniques](#techniques)
+  - [\`\`(backticks) - pour des expressions intelligentes](#backticks---pour-des-expressions-intelligentes)
+  - [`new Set()` - pour supprimer les doublons](#new-set---pour-supprimer-les-doublons)
+- [Fonctions](#fonctions)
+  - [Déclaration de fonction](#déclaration-de-fonction)
+  - [Fonctions immédiatement invoquées (IIFE)](#fonctions-immédiatement-invoquées-iife)
+- [Conclusion](#conclusion)
 
 <svg height="12" width="100%" style="padding-top:2em;padding-bottom:1em">
   <rect y="5" width="100%" height="5" fill="#7191B8"/>
@@ -654,7 +654,7 @@ tableau.fill(0, 1, 4); // [1, 0, 0, 0, 5]
 ## `flat()` - aplatir un tableau
 
 La méthode .flat() permet de fusionner les sous-tableaux dans un tableau principal.
-Par défaut, elle n’aplatit qu’un niveau, mais tu peux préciser la profondeur.
+Par défaut, elle n’aplatit qu’un niveau, mais on peut préciser la profondeur.
 
 ```javascript
 const tableau = [1, [2, 3], [4, [5, 6]]];
@@ -736,7 +736,7 @@ const somme = nombres.reduce((total, n) => total + n, 0); // 10
 ## `reverse()` - inverser l'ordre du tableau
 
 La méthode .reverse() inverse l’ordre des éléments d’un tableau.
-⚠️ Elle modifie directement le tableau original.
+Elle modifie directement le tableau original.
 
 ```javascript
 const nombres = [1, 2, 3, 4];
@@ -792,7 +792,7 @@ function doStuff(a, b, c) {
 
 **Sous forme d'expression de fonction**
 
-Expression de fonction classique : utile quand tu veux déclarer une fonction dans une variable.
+Expression de fonction classique : utile quand on veut déclarer une fonction dans une variable.
 
 ```javascript
 const doStuff = function (a, b, c) {
